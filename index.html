@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <title>&lt;GJV&gt; WebDev</title>
+    <title>&lt;/GJV&gt; WebDev</title>
     <link rel="icon" href="images/GJV-WebDev-Logo.png">
 </head>
 
@@ -14,36 +14,112 @@
     <button id="btnScrollToTop">
         <a href="#"><i class="material-icons">keyboard_double_arrow_up</i></a>
     </button>
-    <div class="logo"><img src="images/GJV-WebDev-Logo.png" alt="">&lt;/<span class="auto-type"></span>&gt; WebDev</div>
-    
-    <header>
-        
 
-        <nav class="menu">
-            <ul>
-                <li><a href="#" data-text="</Home>">&lt;/Home&gt;</a></li>
-                <li><a href="#" data-text="</Projects>">&lt;/Projects&gt;</a></li>
-                <li><a href="#" data-text="</Contact Info>">&lt;/Contact Info&gt;</a></li>
-                <li><a href="#" data-text="</CV Download>">&lt;/CV Download&gt;</a></li>
-            </ul>
-        </nav>
-    </header>
-    <p class="intro">My name is</p>
     <section>
-    <img class="me" src="images/me.png" alt="">
-    <span class="auto-type-2"></span>
+        <figure>
+            <a href="index.html" style="text-decoration: none;display: flex;flex-direction: column;">
+            <img src="images/GJV-WebDev-Logo.png" alt="" style=" width: auto;height: 12vh;display: flex;margin: 0 auto;">
+            <figcaption style="text-decoration: none; color:black;">&lt;/GJV<span class="auto-type"></span>&gt; WebDev</figcaption></a>
+        </figure>
+        
+        <header>
+            <nav>
+                <p class="home"><a href="#" data-text="</Home>">&lt;/Home&gt;</a></li>
+                <p class="projects"><a href="#" data-text="</Projects>">&lt;/Projects&gt;<a>
+                </p>
+                <p class="contactInfo"><a href="#" data-text="</Contact Info>">&lt;/Contact Info&gt;</a></p>  
+                <p id="cvDownload">
+                    <a href="images/Black & White Minimalistic Professional Resume.pdf" data-text="</CV Download>">
+                        &lt;/CV Download&gt;
+                    </a>
+                </p>           
+            </nav>      
+        </header>
     </section>
-    <p><span class="auto-type-2"></span></p>
+
+    <section class="introContainer">
+        <div>
+        <p class="auto-type-2-1">At your service<span class="dot"></span></p>
+        </div>
+
+        <div>
+        <img class="me" src="images/me.png" alt="">
+        </div>
+
+        <div>
+        <img class="hover" src="images/hover-me.gif" alt="hover'">
+        </div>
+
+        <div>
+        <span class="auto-type-2"></span>
+        </div>
+
+        <div>
+        <img id="scrollDown" src="images/sroll-down-removebg-preview.png" alt="scroll down">
+        </div>
+        <div>
+        <p><span class="auto-type-2"></span></p>
+        </div>
+    </section>
+    <!-- <section>
+        <div id="projectContainer">
+            <div class="projec">
+                <a href="Projects/1st-individual-project-main/Home.Html" target="_blank">
+                    <img src="images/individualProject.png" alt="">
+                    Firt individual Project.
+                </a>
+            </div>
+            <div class="project">
+                <a href="Projects/hello_world-main/README.md" target="_blank">
+                    <img src="images/firstRepository.png" alt="">
+                    First Repository.
+                </a>
+            </div>
+            <div class="project">
+                <a href="Projects/HTML-Forms-main/Index.html" target="_blank">
+                    <img src="images/cssForm.png" alt="">
+                    HTML Forms.
+                </a>
+            </div>  
+            <div class="project">
+                <a href="Projects/Learning-HTML-main/Index.html" target="_blank">
+                    <img src="images/learningHTML.png" alt="">
+                    Learning HTML.
+                </a>
+            </div>
+            <div class="project">
+                <a href="Projects/Links-and-Images-main/Links.html" target="_blank">
+                    <img src="images/linkAndImages.png" alt="">
+                    Links and Images.
+                </a>
+            </div>
+            <div class="project">
+                <a href="Projects/Semantic-HTML-main/" target="_blank">
+                    <img src="images/semanticHTML.png" alt="">
+                    Semantic HTML.
+                </a>
+            </div>
+        </div>
+    </section> -->
+    <section>
+        
+    </section>
+    
     <script src="https://unpkg.com/typed.js@2.0.14/dist/typed.umd.js"></script>
     <script>
         var typed = new Typed(".auto-type", {
-                    strings: ["GJV"],
-                    typeSpeed: 100,
+                    strings: [""],
+                    typeSpeed: 50,
                     backSpeed: 50,
                     loop: true})
         var typed = new Typed(".auto-type-2", {
-                    strings: ["Gil Joel Villarba ^1500"],
-                    typeSpeed: 100,
+                    strings: ["My Name is<br><span style='color:white;'>&lt;/</span><span>G</span><span style='color:white;'>il</span> <span>J</span><span style='color:white;'>oel</span> <span>V</span><span style='color:white;'>illarba&gt;</span>"],
+                    typeSpeed: 20,
+                    backSpeed: 5,
+                    loop: true})
+        var typed = new Typed(".dot", {
+                    strings: [".../&gt;"],
+                    typeSpeed: 50,
                     backSpeed: 50,
                     loop: true})
 

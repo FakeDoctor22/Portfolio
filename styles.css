@@ -5,6 +5,7 @@
 }
 
   @import url('https://fonts.googleapis.com/css2?family=Courier+Prime&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Space+Mono&display=swap');
 
 #btnScrollToTop {
     position: fixed;
@@ -13,84 +14,88 @@
     width: 50px;
     height: 50px;
     border-radius: 50%;
-    background-color: #C1FF72;
-    box-shadow: 0 0 50px rgba(255, 255, 255, 0.1);
+    background-color: green;
     color: white;
     border: none;
     outline: none;
     cursor: pointer;
 }
 
-
-.body {
-    
-    background: url(images/Background.png) no-repeat;
+.body { 
+    background: url(images/Background.png) fixed;
     height: 100vh;
     background-size: cover;
     background-position: center;
+    min-height: 0px;
 }
 
-header {
-    width: 100%;
-    height: 75px;
+img {
+    margin-left: 26%;
+    margin-bottom: -20%;
+}
+
+section {
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    padding-top: 30px;
-    padding-left: 560px;
+    margin: 3%;
+}
+
+nav {
+    display: flex;
+    gap: 10px;
 }
 
 
-.logo {
-    display: flex;
-    justify-content: space-between;
-    left: 40px;
-    top: 20px;
-    border-radius: 20px;
+.home, .projects, .contactInfo, #cvDownload{
     background-color: black;
-    font-size: 25px;
-    color: #C1FF72;
-    letter-spacing: 0.25px;
-    cursor: pointer;
+    border-radius: 10px;
     padding: 5px;
-    font-family: 'Courier Prime', monospace;
-    position: absolute;
-    line-height: 80px;
-    opacity: 97%;
+    font-family: 'Space Mono', monospace;
+    font-size: large;
+    font-weight: 600;
+    margin: 0 auto;
 }
 
-nav li {
-    font-family: 'Courier Prime', monospace;
-    list-style: none;
-    padding: 0px 20px;
-    display: inline-block;
+figcaption {
+    text-align: center;
+    text-decoration: none;
 }
 
-li:last-child {
-    right: 120px;
-    position:absolute
+figure {
+    display: flex;
+    flex-direction: column;
+    border-radius: 20px;
+    background-color: green;
+    font-size: 150%;
+    color: black;
+    cursor: pointer;
+    padding: .8%;
+    padding-bottom: 0%;
+    line-height: 11vh;
+    border: solid black;
+    font-family: 'Space Mono', monospace;
+    opacity: 95%;
 }
 
 
-
-ul li a {
+nav p a {
     text-decoration: none;
     position: relative;
     color: rgba(255, 255, 255, 0.1);
     font-weight: 600;
 }
 
-ul li a:before {
+nav a:before {
     content: attr(data-text);
     position: absolute;
     top: 0;
     overflow-y: hidden;
-    color: #C1FF72;
+    color: green;
     white-space: nowrap;
     overflow: hidden;
 }
 
-ul:hover li a::before {
+nav:hover  p a:before {
     animation: animate 0.5s steps(13) forwards;
 }
 
@@ -104,7 +109,8 @@ ul:hover li a::before {
     }
 }
 
-ul li:hover a::before {
+nav
+p:hover a::before {
     animation: animateTwo 2s steps(13) forwards;
 }
 
@@ -119,36 +125,153 @@ ul li:hover a::before {
 }
 
 .me {
+    opacity: 50%;
     scale: .7;   
-    transform: translate(660px) rotate(1turn) rotate(1turn);
-    transition: 1s;
-    filter: blur(5px);
+    position: absolute;
+    filter: blur(10px);
+    top: 5%;
+    left: 8%;
+    z-index: 1;
 }
 
 .me:hover {
     filter: blur(0px);
+    opacity: 1;
 }
 
 .intro {
     position: absolute;
-    font-size: 70px;
-    inline-size: 600px;
-    font-family: 'Courier New', Courier, monospace;
-    font-style: italic;
-    color: #C1FF72;
-    transform: translate(150px) translateY(150px);
-    transition: 1s;
+    font-size: 300%;
+    inline-size: 200%;
+    font-family: 'Space Mono', monospace;
+    color: blue;
+    top: 40%;
+    left: 5%;
+    backdrop-filter: blur(10px);:
     }
 
 
 .auto-type-2 {
+    z-index: 1;
+    visibility: hidden;
     position: absolute;
-    font-size: 70px;
-    inline-size: 350px;
-    font-family: 'Courier New', Courier, monospace;
-    color: #C1FF72;
-    transform: translate(400px) translateY(150px);
-    transition: 1s;
+    font-size: 300%;
+    font-family: 'Space Mono', monospace;
+    color: green;
+    top: 70%;
+    left: 29%;
+    text-align: center;
+    background-color: black;
+    padding: 20px;
+    border-radius: 10px;
+}
+.introContainer:hover .auto-type-2 {
+    visibility: visible;
+    position: absolute;
+    font-size: 300%;
+    font-family: 'Space Mono', monospace;
+    color: green;
+    top: 70%;
+    left: 29%;
+    text-align: center;
+    background-color: black;
+    padding: 20px;
+    border-radius: 10px;
 }
 
+.hover {
+    position: absolute;
+    top: 50%;
+    left: 25%;
+}
+.introContainer:hover .hover {
+    visibility: hidden;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+}
+
+/* srollDown */
+/* keyframe */
+@-webkit-keyframes blink {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+@-moz-keyframes blink {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+@-o-keyframes blink {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+/* keyframe */
+
+
+#scrollDown {
+    position: absolute;
+    left: 23%;
+    bottom: 50%;
+    width: auto;
+    height: 10vh;
+    -webkit-animation: blink 1s;
+    -webkit-animation-iteration-count: infinite;
+    -moz-animation: blink 1s;
+    -moz-animation-iteration-count: infinite;
+    -o-animation: blink 1s;
+    -o-animation-iteration-count: infinite;
+}
+/* srollDown */
+
+
+.auto-type-2-1 {
+    position: absolute;
+    font-size: 200%;
+    font-family: 'Space Mono', monospace;
+    color: green;
+    top: 40%;
+    left: 5%;
+    text-align: center;
+    background-color: black;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.introContainer:hover .auto-type-2-1{
+    visibility: hidden;
+}
+
+.projectContainer {display: grid;
+    grid-template-columns: 300px 300px 300px;
+    background-color: #2196F3;
+    padding: 10px;}
+
+.project {
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 1px solid rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    font-size: 30px;
+    text-align: center;
+}
 
